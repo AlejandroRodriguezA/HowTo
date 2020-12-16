@@ -1,0 +1,20 @@
+- [touch][Crear un archivo]:
+    + $ touch name_file.ext -> Ejemplo:     * touch test.txt
+                                            * touch Documents/.../test.txt
+- [mkdir][ Crear un directorio]:
+    + $ mkdir name_foulder -> Ejemplo:      * $ mkdir text
+                                            * $ mkdir Documents/.../text
+- [cat][Ver el contenido de un archivo por pantalla]:
+    + $ cat name_file.ext -> Ejemplo:   + cat text.txt
+- [cd] [Navegacion por los archivos]:
+    + $ cd ~ (me dirige al directorio raiz)
+    + $ cd .. (sube al directorio anterior)
+    + $ cd Documents/ (entra en el directorio "Documents")
+    + $ cd ~/foulder (Sin importar donde estes va a la carpeta indicada. Tienes que saber la ruta exacta de la carpeta)
+    + $ cd ~/**/Programacion (te dirige a la carpeta Programacion buscando en todo el ordenador, si no sabes donde esta)
+        * Nota: Si existe mas de un archivo con ese nonbre da un error
+- [mv][Renombra el archivo]:
+    + mv source target -> mv test.txt test.MD (Cambia el nombre del archivo o carpeta)
+    + mv source directory
+                                        
+
