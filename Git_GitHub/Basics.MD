@@ -11,4 +11,4 @@
 - [git commit][Guarda en repositorio los archivos]. Pasa al repositorio todos los archivos que esten en "stage".
     + $ git commit -m "Nombre o variable de ese commit"
 - [git restore <file>][Descarta los cambios en los archivos que estan en el "stage"]
-- 
+- [git commit -a][Hace un commit con todos los archivos aunque no esten en "Stage area"]
