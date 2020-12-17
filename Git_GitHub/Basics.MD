@@ -1,7 +1,8 @@
-![git logo](../assets/git_logo2.png)
+![git logo](../assets/git/git_logo2.png)
 
 * Paguina Oficial [Git](https://git-scm.com/) o `https://git-scm.com/`
 * Paguina del libro:[GIT Book](https://git-scm.com/book/en/v2) `https://git-scm.com/book/en/v2`
+
 
 
 ## **Comandos:**
@@ -50,9 +51,9 @@
 	```
 	$ git restore <file>
 	```
-## **Git Braching:**   
+## **Git Braching:**    
 
-	- **Mostrar** todas las ramas o branches que existen:  
+	- **Mostrar** todas las ramas o branches que existen: 
 	
 	~~~
 	$ git branch			
@@ -83,4 +84,37 @@
 	$ git branch -d master
 	Deleted branch main (was e264106).
 	~~~
+	- Para "juntar" o merge dos branch:  
+		1. Me ubico en la branch principal.  
+		
+				$ git checkout <name_branch_principal>  
+		
+		2. Uno las dos branch's. 
+		 
+				$ git merge <name_branch_secundaria>   
+				
+		3. Elimino la branch secundaria.  
+
+				$ git branch -d <name_branch_secundaria>   
+				
+		Ejemplo:
+		![git logo](../assets/git/git-merge.png)   
+		
+				$ git checkout master
+				Switched to branch 'master'
+				$ git merge hotfix
+				.
+				.
+				.
+				$ git branch -d hotfix
+				Deleted branch hotfix (...)   
+				
+		Mas informacion en: 
+		[git-merge]
+		(https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)   
+		
+		![git logo](../assets/git/git-merge2.png)
+		
+			
+	
 	
