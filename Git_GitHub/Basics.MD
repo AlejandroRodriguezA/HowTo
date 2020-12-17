@@ -1,8 +1,9 @@
 GIT
 ===
 
-- Paguina del libro: https://git-scm.com/book/en/v2
+Paguina del libro: https://git-scm.com/book/en/v2
 
+# Comandos:
 
 - [git init][Inicia el repositorio]. Por defecto crea la rama o branch "master"
 - [git status][muestra el estatus de los archivos].
