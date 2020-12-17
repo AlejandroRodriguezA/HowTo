@@ -1,3 +1,5 @@
+# Terminal
+
 - [touch][Crear un archivo]:
     + $ touch name_file.ext -> Ejemplo:     * touch test.txt
                                             * touch Documents/.../test.txt
@@ -16,5 +18,7 @@
 - [mv][Renombra el archivo]:
     + mv source target -> mv test.txt test.MD (Cambia el nombre del archivo o carpeta)
     + mv source directory
+- [ls][Muestra el contenido de la carpeta]:
+    + 
                                         
 
