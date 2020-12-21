@@ -21,6 +21,7 @@
 		- [valueOf](#valueOf)
 
 	* [Metodo de Arrays](#MetodosArrays) 
+
 		1. Transformadores: 
 			- [pop().](#pop)
 			- [push().](#push)
@@ -37,8 +38,22 @@
 		3. De Repeticion:
 			- [filter().](#filter)
 			- [forEach().](#forEach)
-
-
+	* [Objeto Math](#ObjetoMath)
+		1. [Metodos.](#MetodosMath)
+		El objeto Math tiene muchos metodos, aqui algunos de utilidad.[ver mas metodos](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+			- [sqrt().](#sqrt)
+			- [cbrt().](#cbrt)
+			- [max().](#max)
+			- [min()](#min)
+			- [random().](#random)
+			- [round().](#round)
+			- [fround().](#fround)
+			- [floor().](#floor)
+			- [trunc().](#trunc)
+		2. [Propiedades.](#PropiedadesMath)
+		Hay muchas constantes que se pueden usar, [ver mas informacion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math). Por ejemplo:
+			- [PI.](#PI)
+			
 ## <a name="Capitulo1"></a> Capitulo 1:
 * Introduccion.
 	- JS es un leguaje de programacion Interpretado que se difiere a un leguaje compilado, es decir, se ejecuta en el navegador en el inteprete.  
@@ -330,15 +345,101 @@ Tiene tres (3) formas de representarse:
 - <a name="forEach"></a>**forEach()**:Ejecuta por cada uno de los elementos del array la accion o funcion pasada por parametro.  
 	* Sintaxis: arr.forEach(callback(currentValue[, index[, array]]) {
   // execute something
-}[, thisArg]);.[Detalle](XXXX)
+}[, thisArg]);.[Detalle](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
 	* Ejemplo:
 	
 	```js
 	const array1 = ['a', 'b', 'c'];
 	array1.forEach(element => console.log(element));
 	```
-- <a name="XXX"></a>**XXXX()**: XXXX.  
-	* Sintaxis: XXXX.[Detalle](XXXX)
+
+
+## <a name="ObjetoMath"></a> Objeto Math
+
+Math es un objeto integrado de JS que tiene propiedades y metodos para funciones y constantes matematicas. [Para mas informacion.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+
+1. <a name="MetodosMath".</a> Metodos Math:
+	- <a name="sqrt(x)"></a>**sqrt()**: La raiz cuadrada de un numero.  
+	* Sintaxis: Math.sqrt.[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt)
+	
+	- <a name="cbrt"></a>**cbrt()**: Devuelve la raiz cubica de un numero.  
+	* Sintaxis: Math.cbrt(x).[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cbrt)
+
+	- <a name="max"></a>**max()**: Devuelve el mayor de varios numero.  
+	* Sintaxis: Math.max(x,y,...,n).[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max)
+	* Ejemplo:
+	
+	```js
+	console.log(Math.max(1, 3, 2));
+	// expected output: 3
+	
+	console.log(Math.max(-1, -3, -2));
+	// expected output: -1
+	
+	const array1 = [1, 3, 2];
+	
+	console.log(Math.max(...array1));
+	// expected output: 3
+	```
+
+	- <a name="min"></a>**min()**: Devuelve el numero mas pequeño.  
+	* Sintaxis: Math.min(x,y,...,n).[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min)
+	* Ejemplo:
+
+	- <a name="random"></a>**random()**: Devuelve un numero pseudo-aleatorio entre 0 y 1.  
+	* Sintaxis: Math.random.[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
+
+	- <a name="round"></a>**round()**: Devuelve el valorde un numero redondeado al numero entero mas cercano.  
+	* Sintaxis: Math.round(x).[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round)
+	* Ejemplo:
+
+	- <a name="fround"></a>**fround()**: Devuelve el numero mas cercado con una precision de 32bits.  
+	* Sintaxis: var singleFloat = Math.fround(doubleFloat);.[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/fround)
+	* Ejemplo:
+	
+	```js
+	console.log(Math.fround(5.05));
+	// expected output: 5.050000190734863
+
+	console.log(Math.fround(5));
+	// expected output: 5
+	```
+
+	- <a name="floor"></a>**floor()**: Devuelve el mayor entero menor o igual al numero dado.  
+	* Sintaxis: Math.floor(x).[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
+	* Ejemplo:
+	
+	```js
+	console.log(Math.floor(5.95));
+	// expected output: 5
+
+	console.log(Math.floor(5.05));
+	// expected output: 5
+
+	console.log(Math.floor(5));
+	// expected output: 5
+
+	console.log(Math.floor(-5.05));
+	// expected output: -6
+	```
+
+	- <a name="trunc"></a>**trunc()**: Devuelve la parte entera de un numero dado.  
+	* Sintaxis: Math.trunc(x).[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)
+	* Ejemplo:
+	
+	```js
+	console.log(Math.trunc(42.84));
+	// expected output: 42
+
+	console.log(Math.trunc(0.123));
+	// expected output: 0
+
+	```
+	
+2. <a name="PropiedadesMath".</a> Propiedades Math:
+	- <a name="PI"></a>**PI()**: Constante del valor PI.  
+	* Sintaxis: Math.PI.[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI)
+	
 
 
 
