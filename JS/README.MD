@@ -20,6 +20,25 @@
 		- [trim](#trim)
 		- [valueOf](#valueOf)
 
+	* [Metodo de Arrays](#MetodosArrays) 
+		1. Transformadores: 
+			- [pop().](#pop)
+			- [push().](#push)
+			- [shift().](#shift)
+			- [reverse().](#reverse)
+			- [unshift().](#unshift)
+			- [sort().](#sort)
+			- [splice().](#splice)  
+			 
+		2. Accesores:
+			- [join().](#join)
+			- [slice().](#slice)
+			
+		3. De Repeticion:
+			- [filter().](#filter)
+			- [forEach().](#forEach)
+
+
 ## <a name="Capitulo1"></a> Capitulo 1:
 * Introduccion.
 	- JS es un leguaje de programacion Interpretado que se difiere a un leguaje compilado, es decir, se ejecuta en el navegador en el inteprete.  
@@ -243,6 +262,9 @@ Tiene tres (3) formas de representarse:
 ## <a name="MetodosCadenas"></a> Metodos de Cadenas
 #####[Para más informacion ver](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
 
+- <a name="length"></a>**length()**: Devuelve la longitud del string.  
+	* Sintaxis: lentgth(str).[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length)
+
 - <a name="concat"></a>**concat()**: Junta dos o mas cadenas y retorna una nueva cadena.  
 	* Sintaxis: str.concat(str2 [, ...strN]).[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat)  
 - <a name="startWith"></a>**startWith()**: Si una cadena comienza con los caracteres de otra cadena, devuelve true/false.  
@@ -271,8 +293,53 @@ Tiene tres (3) formas de representarse:
 	* Sintaxis: str.trim().[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim)
 - <a name="valueOf"></a>**valueOf()**: Devuelve el valor primitivo de un objeto string.  
 	* Sintaxis: str.valueOf().[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf)
+
+
+## <a name="MetodosArrays"></a> Metodos de Arrays
+- <a name="pop"></a>**pop()**: Elimina el ultimo elemento de un array y lo devuelve.  
+	* Sintaxis: arrName.pop().[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+- <a name="push"></a>**push()**: Agrega uno o mas elementos al final de un array y devuelve la longitud del nuevo array.
+	* Sintaxis: arr.push([element1[, ...[, elementN]]]).[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+- <a name="shift"></a>** shift()**: Elimina el primer elemento de un array y lo devuelve.  
+	* Sintaxis: arr.shift().[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+- <a name="reverse"></a>**reverse()**: Invierte el orden de los elementos de un array.  
+	* Sintaxis: arr.reverse().[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
+- <a name="unshift"></a>**unshift()**: Agrega uno o mas elementos al inicio del array, y devuelve la longitud del nuevo array.  
+	* Sintaxis: arr.unshift(element1[, ...[, elementN]]).[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
+- <a name="sort"></a>**sort()**: Ordena los elementos de un array localmente y lo devuelve ordenado.  
+	* Sintaxis: arr.sort([compareFunction]).[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+- <a name="splice"></a>**splice()**: Cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.  
+	* Sintaxis: let arrDeletedItems = array.splice(start[, deleteCount[, item1[, item2[, ...]]]]).[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+- <a name="join"></a>**join()**: Crea un string con los elementos del array separados por el seperator.  
+	* Sintaxis: arr.join([separator]).[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
+- <a name="slice"></a>**slice()**: Devuelve un trozo del array original.  
+	* Sintaxis: arr.slice([start[, end]]).[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+- <a name="filter"></a>**filter()**:Crea un nuevo array con los criterios deseados.  
+	* Sintaxis: let newArray = arr.filter(callback(currentValue[, index[, array]]) {
+  // return element for newArray, if true
+}[, thisArg]);.[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+	* Ejemplo:
+
+	```js
+	const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+	
+	const result = words.filter(word => word.length > 6);
+	console.log(result);
+	// expected output: Array ["exuberant", "destruction", "present"]
+	```
+- <a name="forEach"></a>**forEach()**:Ejecuta por cada uno de los elementos del array la accion o funcion pasada por parametro.  
+	* Sintaxis: arr.forEach(callback(currentValue[, index[, array]]) {
+  // execute something
+}[, thisArg]);.[Detalle](XXXX)
+	* Ejemplo:
+	
+	```js
+	const array1 = ['a', 'b', 'c'];
+	array1.forEach(element => console.log(element));
+	```
 - <a name="XXX"></a>**XXXX()**: XXXX.  
 	* Sintaxis: XXXX.[Detalle](XXXX)
+
 
 
 
