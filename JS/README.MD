@@ -1,8 +1,10 @@
 # JS a Junior de [Soy Dalton](https://youtu.be/z95mZVUcJ-E)
 
 # Indice:
-- [Capitulo 1:](#Capitulo1)
-- [Capitulo 2:](#Capitulo2) 
+1. [Capitulo 1:](#Capitulo1)
+2. [Capitulo 2:](#Capitulo2)
+3. Capitulo 3:
+4. Capitulo 4:
 
 	* [Metodo de Cadenas](#MetodosCadenas)  
 		- [concat()](#concat)
@@ -53,7 +55,34 @@
 		2. [Propiedades.](#PropiedadesMath)
 		Hay muchas constantes que se pueden usar, [ver mas informacion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math). Por ejemplo:
 			- [PI.](#PI)
-			
+
+
+5. [Capitulo 5:](Capitulo5)
+
+	- [Consola de JavaScript (console).](#Consola)
+	- [Metodos de registro en la consola.](#MRegistro)
+	- [Metodos de conteo en la consola.](#MConteo)
+	- [Metodos de agrupacion en la consola.](#MAgrupacion)
+	- [Metodos de temporizacion en la consola.](#MTemporizacion)
+
+	
+6. [Capitulo 6:](#Capitulo6)
+
+	- [El DOM (Document Object Model).](#DOM)
+	- [Metodos de seleccion de elementos.](#MSeleccionElementos)
+	- [Metodos de atributos de un elemento.](#MAtributos)
+	- [Atributos globales.](#AtributosGlobales)
+	- [Atributos de inputs.](#AStyle)
+	- [Propriedad Style.](#PropiedadStyle)
+	- [Clases, classList y sus metodos.](#ClassList)
+	- [Obtencion y modificadores de childs.](#ModificarChilds)
+	- [Metodos de childs (hijos).](#MChilds)
+	- [Propiedades de parents (Padres).](#PropiedadesPadres)
+	- [Propiedades de siblingds (Hermanos).](#PropiedadesHermanos)
+	- [Nodos, una propiedad extra.](#PropiedadExtra)
+
+	[^under]
+	[^under]: If **Underline** _is_ disabled_ `_this_` will be rendered as *emphasized* instead of being underlined.	
 ## <a name="Capitulo1"></a> Capitulo 1:
 * Introduccion.
 	- JS es un leguaje de programacion Interpretado que se difiere a un leguaje compilado, es decir, se ejecuta en el navegador en el inteprete.  
@@ -436,10 +465,348 @@ Math es un objeto integrado de JS que tiene propiedades y metodos para funciones
 
 	```
 	
-2. <a name="PropiedadesMath".</a> Propiedades Math:
+2. <a name="PropiedadesMath".</a> Pr5piedades Math:
 	- <a name="PI"></a>**PI()**: Constante del valor PI.  
 	* Sintaxis: Math.PI.[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI)
 	
+
+## <a name="Capitulo5"></a> Capitulo 5:
+
+
+
+La consola se puede utilizar para variadas funciones como depurar errores, ubicar, asignar o modificar variables, asi como interactuar con la paguina.[Mas informacion](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/The_command_line_interpreter)
+
+1. <a name="Consola"></a> Consola de JavaScript (console).
+2. <a name="MRegistro"></a>Metodos de registro en la consola.
+	-	assert()
+	- 	clear()
+	-  error()
+	-  info()
+	-  log()
+	-  table()
+	
+3. <a name="MConteo"></a>Metodos de conteo en la consola.
+	- count(). Para contar las veces que se ejecuta algo.
+	- countReset(). Reinicia el contador.
+4. <a name="MAgrupacion"></a>Metodos de agrupacion en la consola.
+	- group("nombre_grupo"). Crea un nuevo grupo en la linea de registro
+	- groupEnd(). Remueve un grupu en linea de registro
+	- groupCollapsed('nombre_grupo'). Igual que el group pero los muestra cerrado.
+5. <a name="MTemporizacion"></a>Metodos de temporizacion en la consola.
+
+	Se puede utilizar para saber cuanto tiempo tarda en ejecutarse algo, cuando tiempo tarda un usuario en hacer algo.
+
+	- time()
+	- timeLog()
+	- timeEnd()
+
+**Adicional:**  console.log("%cHola","color:red;background:black;padding:20px");
+
+
+## <a name="Capitulo1"></a> Capitulo 6:
+
+1. <a name="DOM"></a>El DOM (Document Object Model).
+2. <a name="MSeleccionElementos"></a>Metodos de seleccion de elementos.
+	* getElementById(). Selecciona un elemento por ID.
+	
+	```html
+	<div class="idDiv1">
+    	<p id="ID_Parrafo"></p>
+	</div>
+	```  
+	
+	```js
+	parrafo = document.getElementById("ID_Parrafo");
+	document.write(parrafo + "<br>");
+	```
+	
+	* getElementByTagName(). Selecciona todos los elementos que coincidan con el nombre de la etiqueta especificada.
+
+	```js
+	parrafo1 = document.getElementsByTagName("p");
+	document.write(parrafo1 + "<br>");
+	```
+	* querySelector(). Devuelve el primer elemento que coincida con el grupo especificado de selectores.
+
+	```js
+		// Selecionado por la clase
+	parrafo2 = document.querySelector(".parrafo");
+	document.write(parrafo2 + "<br>");
+		// Selecionado por el ID
+	parrafo3 = document.querySelector("#ID_Parrafo");
+	document.write(parrafo3 + "<br>");
+	```
+	* querySelectorAll(). Devuelve todos los elementos que coincidan con el grupo especificado de selectores.
+
+	
+	```js
+	parrafo4 = document.querySelectorAll(".parrafo");
+	document.write(parrafo4 + "<br>");
+	```
+	
+3. <a name="MAtributos"></a>Metodos de atributos de un elemento.
+	* setAttribute(). Modifica el valor de un atriguto.
+	* getAttribute(). Obtiene el valor de un atributo.
+	* romeveAttribute(). Remueve el valor de un atributo.
+	*
+	
+	```html
+	<input type="range" class="rangoEtario">
+    <label>Etiqueta del Input</label>
+    ```
+    
+    ```js
+    const rangoEtario = document.querySelector (".rangoEtario");
+
+	//document.write(rangoEtario);
+		
+	//rangoEtario.setAttribute("type","text");
+		
+	valorDelAtributo = rangoEtario.getAttribute("type");
+document.write(valorDelAtributo);
+	```
+4. <a name="AtributosGlobales"></a>Atributos globales. Para mas informacion [ver](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes) 	* class. Lista de clases del elemento separadas por espacios.
+	* contenteditable. Indica si el elemento puede ser modificado por el usuario, booleano.
+	
+	```html
+	<h1 class="titulo"> Titulo </h1>
+	```
+	
+	```js
+	// Selecciono por classe titulo
+	const titulo = document.querySelector(".titulo");
+	// Modifico el atributo
+ 	titulo.setAttribute("contentEditable","true");
+ 	```
+	* dir. Indica la direccionalidad del texto.
+	* hidden. Indica si el elemento es o no relevante. No lleva valor, al existir ya no se muestra el elemento.
+	* id. Define un identificador unico.
+	* style. Contiene declaracones de estilo CSS para el elemento.
+	* tabindex. Indica si el elemento puede obtener un focus de input.
+	* title. Contiene un texto con informacion del elemento.
+
+
+
+5. <a name="AStyle"></a>Atributos de inputs. Para mas informacion [ver](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+	* className. Devuelve el nombre de la clase
+	
+	```html
+	<div><input type="text" class="input-normal" value="XYZ"><br></div>
+	```
+	
+	```js
+	const inputIntancia = 		document.querySelector(".input-normal");
+	document.write(inputIntancia.className);
+	// Imprime el nombr de la clase.
+	```
+	* value.
+	
+	```js
+	const inputIntancia = 		document.querySelector(".input-normal");
+	document.write(inputIntancia.value);
+	// Imprime el nombr de la clase.
+	```
+
+	* type.
+	
+	```js
+	inputIntancia.type="range";
+		// Cambia el typo de elemento a range.
+	inputIntancia.type="number";
+		// Cambia el typo de elemeento a number.
+	```
+	
+	* accept. Se utiliza para abrir archivo, las extenciones que acelta.
+	
+	
+	```js
+	inputIntancia.accept =  "image/png"
+	```
+	
+	* form. Nos permite ejecutar un imput dentro de un form.
+
+	  En este ejemplo, el Input-Fuera no afecta al form, pues esta fuera.
+	
+	```html
+	<div>
+        <form action="" id="formulario">
+            <input type="text" id="Input-Dentro">
+        </form>
+        <input type="text" id="Input-Fuera" form="formulario">
+    </div>
+    ```
+    En este ejemplo, incluimos el atributo form:   
+	
+	```js
+	const inputIntancia2 = document.querySelector("#Input-Fuera");
+	inputIntancia2.setAttribute("form","formulario");
+		// Nota: no funciona de la siguiente forma:
+	inputIntancia.form="formulario";
+	```
+	
+	Entonces, el Input-Fuera va a ejecutar igual que el input-Dentro
+	
+	```html
+	<div>
+        <form action="" id="formulario">
+            <input type="text" id="Input-Dentro">
+        </form>
+        <input type="text" id="Input-Fuera" form="formulario">
+    </div>
+    ```
+	
+	* minlength. Validador del input en un formulario.
+	
+	```html
+	<form >
+            <input type="text" id="Min-Len"><br>
+            <input type="submit" value="Enter">
+    </form>
+	```
+	
+	```js
+	const inputInance3 = document.querySelector("#Min-Len");
+ 	inputInance3.minLength = "5";
+ 	```
+ 	
+	* placeholder.
+
+	```js
+	const inputInance3 = document.querySelector("#Min-Len");
+ 	inputInance3.placeholder = "Tu nombre:";
+ 	```
+	* required. Validacion del input un form, para indicar que es requerido.
+
+	```js
+	const inputInance3 = document.querySelector("#Min-Len");
+ 	inputInance3.placeholder = "Tu nombre:";
+ 	inputInance3.required = false;
+ 	```
+ 	
+ 	Nota: Cuando se utiliza esta atributo po JS, funciona en la validacion, pero si vamos a ver el elemento en la paguina web no se muestra. Podria ser por seguridad?
+ 	
+ 	
+6. <a name="PropiedadStyle"></a>Propriedad Style.
+
+	* Nos permite modificar caracteristicas CSS del elemento.
+	
+	```js
+	const titulo = documen.querySelector(".titulo");
+	titulo.style.color = "red";
+	```
+7. <a name="ClassList"></a>Clases, [classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) y sus [metodos](https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList).
+	
+	* classList.add().Añade una clase	
+	```htnl
+	<span class="a b c"></span>
+	```
+	
+	```js
+	let span = document.querySelector("span");
+	let classes = span.classList;
+	classes.add("d");
+	span.textContent = classes;
+	```
+	
+	* classList.remove()
+	
+	```
+	<div id="a" class="a b c"></div>
+	```
+	
+	```js
+	let span2 = document.getElementById("a")
+	let classes2 = span2.classList;
+	
+	classes2.remove("c", "b");
+	span2.textContent = classes2;
+	```
+	
+	El resultado es: a
+	
+	
+	* classList.item().Devuelve la clase del indice indicado.
+	
+	```
+	<span class="a b c"></span>
+	```
+	
+	```js
+	let span = document.querySelector("span");
+	let classes = span.classList;
+	let item = classes.item(classes.length-1);
+	span.textContent = item;
+	```
+	El resultado es: C
+	
+	* classList.contains().
+	
+	```
+	<span class="a b c"></span>
+	```
+	
+	```js
+	let span = document.querySelector("span");
+	let classes = span.classList;
+	let result = classes.contains("c");
+	if (result) {
+	  span.textContent = "The classList contains 'c'";
+	} else {
+	   span.textContent = "The classList does not contain 'c'";
+	}
+	```
+	El resultado es: `The classList contains 'c'`
+	
+	* classList.replace()
+	
+	```
+	<span class="a b c"></span>
+	```
+	
+	```js
+	let span = document.querySelector("span");
+	let classes = span.classList;
+	
+	let result = classes.replace("c", "z");
+	console.log(result);
+	
+	if (result) {
+	  span.textContent = classes;
+	} else {
+	  span.textContent = 'token not replaced successfully';
+}
+	```
+	El resultado es: `a b z`
+	
+	* classList.toggle(). Si no tiene la clase especificada, la agrega, si ya la tiene, la elimina.
+	
+	```
+	<span class="a b">classList is 'a b'</span>
+	```
+	
+	```
+	let span = document.querySelector("span");
+	let classes = span.classList;
+	
+	span.addEventListener('click', function() {
+	  let result = classes.toggle("c");
+	
+	  if (result) {
+	    span.textContent = `'c' added; classList is now "${classes}".`;
+	  } else {
+	    span.textContent = `'c' removed; classList is now "${classes}".`;
+	  }
+	})
+	```
+	El resultado es: ` classList is 'a b'`
+	
+8. <a name="ModificarChilds"></a>Obtencion y modificadores de childs.
+9. <a name="MChilds"></a>Metodos de childs (hijos).
+10. <a name="PropiedadesPadres"></a>Propiedades de parents (Padres).
+11. <a name="PropiedadesHermanos"></a>Propiedades de siblingds (Hermanos).
+12. <a name="PropiedadExtra"></a>Nodos, una propiedad extra.
+
+
 
 
 
