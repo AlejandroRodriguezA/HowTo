@@ -6,7 +6,7 @@
 3. Capitulo 3:
 4. Capitulo 4:
 
-	* [Metodo de Cadenas](#MetodosCadenas)  
+	* [Método de Cadenas](#MetodosCadenas)  
 		- [concat()](#concat)
 		- [startWith()](#startWith)
 		- [endWith()](#endWith)
@@ -22,7 +22,7 @@
 		- [trim](#trim)
 		- [valueOf](#valueOf)
 
-	* [Metodo de Arrays](#MetodosArrays) 
+	* [Método de Arrays](#MetodosArrays) 
 
 		1. Transformadores: 
 			- [pop().](#pop)
@@ -33,11 +33,11 @@
 			- [sort().](#sort)
 			- [splice().](#splice)  
 			 
-		2. Accesores:
+		2. Accesorios:
 			- [join().](#join)
 			- [slice().](#slice)
 			
-		3. De Repeticion:
+		3. De Repetición:
 			- [filter().](#filter)
 			- [forEach().](#forEach)
 	* [Objeto Math](#ObjetoMath)
@@ -79,7 +79,7 @@
 	- [Obtencion y modificadores de childs.](#ModificarChilds)
 	- [Metodos de childs (hijos).](#MChilds)
 	- [Propiedades de parents (Padres).](#PropiedadesPadres)
-	- [Propiedades de siblingds (Hermanos).](#PropiedadesHermanos)
+	- [Propiedades de siblings (Hermanos).](#PropiedadesHermanos)
 	- [Nodos, una propiedad extra.](#PropiedadExtra)
 
 	[^under]
