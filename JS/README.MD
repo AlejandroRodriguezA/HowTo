@@ -75,6 +75,7 @@
 	- [Atributos de inputs.](#AStyle)
 	- [Propriedad Style.](#PropiedadStyle)
 	- [Clases, classList y sus metodos.](#ClassList)
+	- [Creacion de Elementos.](#CreacionElementos)
 	- [Obtencion y modificadores de childs.](#ModificarChilds)
 	- [Metodos de childs (hijos).](#MChilds)
 	- [Propiedades de parents (Padres).](#PropiedadesPadres)
@@ -800,10 +801,238 @@ document.write(valorDelAtributo);
 	```
 	El resultado es: ` classList is 'a b'`
 	
-8. <a name="ModificarChilds"></a>Obtencion y modificadores de childs.
+	* node.textContent.[ver más](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent). Devuelve o asigna el valor de texto interno del nodo.
+	
+	```html
+	<div id="divA">This is <span>some</span> text!</div>
+	```
+	
+	```js
+	let text = document.getElementById('divA').textContent;
+	// The text variable is now: 'This is some text!'
+	```
+	
+	* Element.innerHTML.[ver más](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML). Devuelve o asigna, el valor interno del nodo, incluyendo el HTML interno.
+
+	```html
+	<div id="divA">This is <span>some</span> text!</div>
+	```
+	
+	```js
+	let  tHtml = document.getElementById("divA").innerHTML;
+ 	alert(tHtml);
+	```
+	El resultado es: `This is <span>some</span> text!`
+
+	* Element.outerHTML.[ver más](https://developer.mozilla.org/en-US/docs/Web/API/Element/outerHTML).Devuelve o asigna, el valor interno del nodo, incluyendo el HTML que lo contine.
+
+	```html
+	<div id="divA">This is <span>some</span> text!
+    <p id="pEjemplo">Ejemplo:</p>
+	</div>
+	```
+	
+	```js
+		// Guarda en toHtml el HTML de todo el elemento.
+	let toHtml = document.getElementById("divA").outerHTML;
+		// Escribe el resultado en el parrafo id="pEjemplo
+ 	document.getElementById("pEjemplo").textContent = toHtml;
+	```
+	El resultado es:
+	
+	```
+	<div id="divA">This is <span>some</span> text! <p id="pEjemplo">Ejemplo:</p> </div>
+	```
+	
+8. <a name="CreacionElementos"></a>Creacion de Elementos.
+	* createElement().Crea elemento en el DOM.[ver más](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
+	* createTextNode().
+	* createDocumentFragment(). Esto es nuevo y se utiliza para optimizar recursos, cuando se inserta un nuevo elemento al DOM, el navegador borra el contenido y lo dibuja nuevamente con el nuevo elemento, entonces, se utiliza el **createDocumentFragment** para hacer una sola adicion al DOM.
+
+	```html
+	<div class="contenedor"></div>
+	```
+	
+	```js
+	// createDocumentFragment
+		// Seleccionamos el elemento.
+	const contenedor = document.querySelector(".contenedor");
+		//Creamos el fragmento a utilizar.
+	const fragmento = document.createDocumentFragment ();
+	for (i=0;i<5; i++){
+			// Creamos el elemento li:lista
+	    const item = document.createElement("li");
+	    	// Le asignamos valor a ese elemento.
+	    item.textContent = "Este es un item de la lista";
+	    	// Sumamos ese elemento con ese valor al fragmento.
+	    fragmento.appendChild(item);
+}
+		// Sumamos o agregamos el fragmento completo al DOM, y aqui lo redibuja.
+ 	contenedor.appendChild(fragmento);
+ 	```
+	
+9. <a name="ModificarChilds"></a>Obtencion y modificadores de childs.[más información](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode)
+	* firstChild.
+	* lastChild.
+	* firstElementChild.
+	* lastElementChild.
+	
+	```html
+	<div class="contenedor">
+    <h2>Un h2 comun</h2>
+    <h4>Un h4 comun</h4>
+    <p>Un parrafo</p>
+	</div>
+	```
+	
+	```js
+	// Obtencion y modificadores de childs.
+	const contenedor=document.querySelector(".contenedor");
+	const primerHijo=contenedor.firstChild;
+	console.log(primerHijo);
+	 /* Aqui nos muestra, por consola, que el primer hijo es un texto, pues hay espacio antes de la
+	 etiqueta del h2. Esto se resuelve utilizando   firstElementChild. */
+	 const primerElementoHijo = contenedor.firstElementChild;
+	 console.log(primerElementoHijo);
+	```
+
+	
+	* childNotes. Nos devuelve todos los nodos hijos (incluyendo los espacios entre elementos) y es un objeto que se puede recorrer con forEach.
+	
+	```js
+	const contenedor=document.querySelector(".contenedor");
+	const hijo=contenedor.childNodes;
+	console.log(hijo);
+		// Para mostrar todos los hijos:
+	hijo.forEach(hijo => console.log(hijo));
+	```
+	* children. Nos devuelve los elementos hijos del nodo.
+	
+	```js
+	// Children.	
+	const contenedor=document.querySelector(".contenedor");
+	const hijo=contenedor.children;
+	console.log(hijo);
+	```
+	
+	```js
+	// Para recorrerlo
+	console.log(hijo);
+	for (hijos of  hijo){
+	    console.log(hijos);
+	}
+	```
+	
 9. <a name="MChilds"></a>Metodos de childs (hijos).
+	* replaceChild().
+	* removeChild().
+	* hasChlidNodes().
+
+	```html
+	<div class="contenedor">
+    <h2 class="h2">Un h2 comun</h2>
+    <h4>Un h4 comun</h4>
+    <div class="divParrafo">
+         <p id="parrafo">Un parrafo</p>
+    </div >
+    <input type="submit" value="Renplace h2" id="replace" onClick="remplazar()"><br>
+    <input type="submit" value="Remover  parrado" id="remover" onClick="remover()"><br>
+    <input type="submit" value="Tiene Hijos?" id="remover" onClick="tieneHijos()"><br>
+    <input type="submit" value="Remover Todos los hijos" id="removerTodosHijos" onClick="removerTextHtml()"><br>
+	</div>
+	```
+	
+	```js
+	//  replaceChild + removeChild + hasChildNodes
+	// Utilizando onClick eventos, para hacer practicas variadas.
+	const contenedor=document.querySelector(".contenedor");
+	const contenedorDivParrafo = document.querySelector(".divParrafo");
+	const h2_nuevo = document.createElement("h2");
+	h2_nuevo.textContent =  "Titulo";
+	h2_angtiguo =  document.querySelector(".h2");
+	//contenedor.replaceChild(h2_nuevo,h2_angtiguo);
+	p_antiguo = document.querySelector("#parrafo");
+	const remplazar = ()  => contenedor.replaceChild(h2_nuevo,h2_angtiguo);
+	const removerTextHtml = () =>{
+	    let cont = document.querySelector(".divParrafo");
+	    let primerHijo2 = cont.firstChild;
+	    while (cont.firstChild){
+	        cont.removeChild(cont.firstChild);
+	    }
+	}
+	const remover = () => {
+	    contenedorDivParrafo.removeChild(p_antiguo);
+	    removerTextHtml();
+	    //let botton = document.getElementById("parrafo");
+	    //botton.setAttribute("hidden","true");
+	}
+	const tieneHijos = () =>{
+	    let contenedorDivParrafoNuevo = document.querySelector(".divParrafo");
+	    let respuestaTieneHijos = contenedorDivParrafoNuevo.hasChildNodes();
+	    if (respuestaTieneHijos) {
+	        alert("Si tiene Hijos");
+	        } else {
+	            alert("No tiene Hijos");
+	        }
+	    }
+	```
 10. <a name="PropiedadesPadres"></a>Propiedades de parents (Padres).
+	* parentElement.
+	* parentNode. Se usa muy poco, pues en la mayoria de los casos los padres son elementos.
+
+	```js
+	const contenedor=document.querySelector("#parrafo");
+	console.log(contenedor.parentElement);
+	```
+	Me va a devolver divParrafo, que es el padre de parrafo
+	
+	```js
+	const contenedor=document.querySelector(".divParrafo");
+	console.log(contenedor.parentElement);
+	```
+	Me va devolver el div contenedor.
+
+	
 11. <a name="PropiedadesHermanos"></a>Propiedades de siblingds (Hermanos).
+	* nextSibling.
+	* previousSibling.
+	* nextElementSibling.
+	* previousElementSibling. 
+
+	```js
+	const contenedor=document.querySelector(".divParrafo");
+	    // Me devuelve el hermano siguiente, incluyendo los Text.
+	    // En este caso un Text
+	console.log(contenedor.nextSibling)
+	    // Me devuelve el hermano anterior, solo los elementos.
+	    // En este caso el h4
+	console.log(contenedor.previousElementSibling);
+	    // Me devuelve el hermano siguiente, solo elementos.
+	    // En este caso el input "Remplace h2"
+	console.log(contenedor.nextElementSibling);
+	```
+	## Practica:
+	**Practica** para eliminar los nodos Text de un Elemento. Utilizo el metodo node.nodeType [ver más](https://developer.mozilla.org/es/docs/Web/API/Node/nodeType) y el forEach para recorrer la lista de objetos [ver más](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+	
+	```js
+	// Practica - Eliminar todos los Nodos tipo Text
+	const removerTextHtml2 = (identificadorClase) =>{
+	    const contenedor=document.querySelector(identificadorClase);
+	    const hijo=contenedor.childNodes;
+	    console.log(`Al comienso tiene: ${hijo.length} hijos`);
+	    hijo.forEach(hijo => {
+	        //console.log(hijo);
+	        //console.log(hijo.nodeType);
+	        if (hijo.nodeType != 3){
+	            hijo.nextSibling
+	        } else{
+	            contenedor.removeChild(hijo);
+	        }
+	    });
+	    console.log(`Al final tiene: ${hijo.length} hijo(s)`);
+	}
+removerTextHtml2(".divParrafo");
+```
 12. <a name="PropiedadExtra"></a>Nodos, una propiedad extra.
 
 
