@@ -8,6 +8,12 @@
     touch Documents/.../test.txt
 
     ```
+- **rm** - Borrar un archivo:
+	
+	```bash
+	rm test.html
+	```
+	    
 - **mkdir** - Crear un directorio:
     * mkdir \<name_foulder\>    
     
