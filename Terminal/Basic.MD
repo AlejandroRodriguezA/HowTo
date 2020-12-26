@@ -65,6 +65,14 @@
 	```
 
 - **mdfind** kind:folder "folder_name"
+
+- **pwd | pbcopy** Copia en el porta papeles la ruta actual.
+- **pbpaste** Pega lo que tiene el porta papeles.
+
+- Para abrir una aplicacion en ventana nueva:
+    ```bash
+    $ code ~/Documents/README.MD --new-windown
+    ```
                                         
 ## Text Command Line Shortcuts 
 [agradecimientos](https://wilsonmar.github.io/mac-osx-terminal/#open-terminal-several-ways)
