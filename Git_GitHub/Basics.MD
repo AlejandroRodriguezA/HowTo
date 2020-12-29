@@ -84,7 +84,7 @@
 	$ git branch -d master
 	Deleted branch main (was e264106).
 	```
-- Para **junta** o merge dos branch:  
+- Para **juntar** o merge dos branch:  
 		1. Me ubico en la branch principal.  
 		```
 		$ git checkout <name_branch_principal>  ```   
@@ -115,6 +115,15 @@
 		
 	![git logo](../assets/git/git-merge2.png)
 		
+- Para **clonar** de GitHub:
+	```git
+	$ git clone <remote_repo>
+	```
+	Para clonar un branch especifico
+	```git
+	$ git clone -b <branch> <remote_repo>
+	```
+	
 			
 	
 	

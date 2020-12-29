@@ -596,14 +596,14 @@ document.write(valorDelAtributo);
 	```
 	
 	```js
-	const inputIntancia = 		document.querySelector(".input-normal");
+	const inputIntancia = document.querySelector(".input-normal");
 	document.write(inputIntancia.className);
 	// Imprime el nombr de la clase.
 	```
 	* value.
 	
 	```js
-	const inputIntancia = 		document.querySelector(".input-normal");
+	const inputIntancia = document.querySelector(".input-normal");
 	document.write(inputIntancia.value);
 	// Imprime el nombr de la clase.
 	```
