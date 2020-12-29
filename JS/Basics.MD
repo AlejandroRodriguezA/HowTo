@@ -1,7 +1,17 @@
 # JS a Junior de [Soy Dalton](https://youtu.be/z95mZVUcJ-E)
 
-# Indice:
+# Indice:[Prueba](./Curso2.MD/#windown)
 1. [Capitulo 1:](#Capitulo1)
+	* [Introducción.](#Introduccion)
+	* [Editor de Texto.](#Editor)
+	* [Usos de Java.](#Usos)
+	* [Formas de incluir JS.](#Enlace)
+	* [Variables.](#Variables)
+	* [Pedir datos con prompt.](#Prompt)
+	* [Operadores.](#Operadores)
+	* [Concatenacion.](#Concatenacion)
+	* [Camel Case.](#Camel)
+	* [Condicionales](#Condicionales)
 2. [Capitulo 2:](#Capitulo2)
 3. Capitulo 3:
 4. Capitulo 4:
@@ -84,8 +94,10 @@
 
 	[^under]
 	[^under]: If **Underline** _is_ disabled_ `_this_` will be rendered as *emphasized* instead of being underlined.	
-## <a name="Capitulo1"></a> Capitulo 1:
-* Introduccion.
+
+
+## <a name="Capitulo1"></a> Capitulo 1: 
+* <a name="Introduccion"></a>Introduccion. [video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=445s)
 	- JS es un leguaje de programacion Interpretado que se difiere a un leguaje compilado, es decir, se ejecuta en el navegador en el inteprete.  
 	- Es Orientado a objetos.  
 	- Es Imperativo. Se va ejecutando linea a linea.
@@ -94,7 +106,8 @@
 	- Tipado debil. Significa que el valor de los datos y variables puede ir variando durante el tiempo.Se define como string al comienzo y luego se redefine como interger.
 	- Lenguaje dinnamico. El dato se ajusta a la variable.
 	- Esta construido sobre ECMASCRIPT (5, 6, 7, 8, Next).
-* Esta usando Sublime Text 3, su configuracion (plugins) son:   
+
+* <a name="Editor"></a>Editor de Texto:Esta usando Sublime Text 3, su configuracion (plugins) son:	[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=940s)
 	- shift+command+P --> install control Package
 	- BlackBird-ColorScheme
 	- Brogrammer
@@ -103,7 +116,7 @@
 	- ColorHelper
 	- ColorPicker
 	
-* Para que se usa:  
+* <a name="Usos"></a>Para que se usa:	[video:](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=1346s)
 	- Dinamismo de los sitios web
 	- Servidor en NodeJS
 	- Tecnologias Frontend como Angular, React o Vue.JS
@@ -111,7 +124,7 @@
 	- Desktop Apps
 	- Inteligencia Artificial. No es muy usual, pero se puede usar.
 	
-* Como enlazar JS:   
+* <a name="Enlace"></a>Como enlazar JS:	[video:](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=1346s)
 	- En linea:   
 	```<h1 onclick="alert('hola')"> Saludo </h1>	 ```
 	- Dentro de la etiqueta:   
@@ -120,38 +133,113 @@
 		        alert('Hola desde script');
 		    </script> ```
 	- Enlazado desde un archivo externo:  
-			<script src="codigo.js" type="text/javascript"></script>
+	```
+	<script src="codigo.js" type="text/javascript"></script>
+	```
 	- Con un Require. Buscar inforamcion pues el no lo explica.
-* Variables:
+* <a name="Variables"></a>Variables:	[video:](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=1672s)
 	- Hay tres formas de declarar la variables (var, let, const)
 		* var: alcance global.
 		* let: alcance local.
 		* const: es una constante.
 		Nota: Si no se coloca nada, la variable es definida de forma global.  
-	- Hoisting. 
-*  Nota: Los errores se muestran en consola, no en la paguina. option+command+j para mostrar la consola de JS.
-*  **prompt**("mensaje") -> Esta funcion permite ingresar informacion por el usuario.
-*  document.write(vatiable); --> Escribe la variable en la pag.web.
-*  Operadores:   	
-	- De asignacion. [mas info](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Assignment_Operators)  
+	- Casos especiales:
+		- Undefined:
+		- Null:
+		- Nan:
+	- Multiples Variables.	[video](https://youtu.be/z95mZVUcJ-E?t=2429)
+	- Hoisting: [video](https://youtu.be/z95mZVUcJ-E?t=2513)
+	-  Nota: Los errores se muestran en consola, no en la paguina. option+command+j para mostrar la consola de JS.
+*  <a name="Prompt"></a>**prompt**("mensaje")	[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=2774s)-> Esta funcion permite ingresar informacion por el usuario.
+
+```js
+let nombre = prompt("Dime tu nombre");
+alert ("hola " + nombre);
+```   
+* document.write(vatiable); --> Escribe la variable en la pag.web.
+
+*  <a name="Operadores"></a>Operadores:	[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=2991s)	
+	- De asignacion. [más info](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Assignment_Operators)  
 		* x = y
 		* x += y
 		* x -= y
 		* x *= y
 		* x /= y
-		* x %= y
+		* x %= y  
 		
-	- Aritmeticos.
-* Concatenacion:  
-	- **Para forzar** a que se concatene : frase = "" + numero + numero1 /* fuerza  a que sea string*/
+	```js
+	let numero = 10;
+	numero += 5;
+	document.write(numero);
+	// Da como resultado 15
+	// numero += 5 es igual que numero = numero +5
+	numero -= 5;
+	// Es igual que numero = numero - 5
+	numero %= 6;
+	// El resultado es 4.
+	// Numero es 10, al dividirlo entre 6, el resto es 4, asi que, numero %= 6 es igual al resto de 10 % 4.
+	numero **=3
+	// El resultado es 1000 = 10^3.	
+	```
+	**Nota**: document.write(variable); --> Escribe la variable en la pag.web.
+		
+	- Aritmeticos.[más info](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math)  
+		* Suma.  
+		
+		```js
+		numero1 = 10;
+		numero2 = 5;
+		resultado = numero1 + numero2;
+		// resultado = 11;
+		resultado = numero1++
+		// Resultado = 16.
+		```
+		* Resta.
+		
+		```js
+		numero1 = 10;
+		numero2 = 5;
+		resultado = numero1 - numero2;
+		// resultado = 5;
+		resultado = numero1--
+		// Resultado = 9.
+		```
+		
+		* Multiplicación.
+		* División.
+		* Resto.
+		
+* <a name="Concatenacion"></a>Concatenacion:	[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=2991s) 
+	- **Para forzar** a que se concatene : frase = "" + numero + numero1 ***fuerza  a que sea string***
+	
+	```js
+	let numero = 5;
+	let numero2 = 5;
+	resultado = "" + numero + numero2;
+	document.write(resultado);
+	// El resultado es 55.
+	```
 	- **Para concatenar dos string** se puede usar el **concat**: 
-	```string.concat(string2)```   
+	
+	```js
+	// string.concat(string2)
+	let string = "Hola ";
+	let string2 = "Dalton";
+	resultado = string.concat(string2);
+	document.write(resultado);
+	// El resultado es: Hola Dalton
+	```   
+	
 	-  Con backtiks y la variable entre ${}. 
-			```
-			frase2= `<h2>
-        Hola ${nombre}, Bienvenido a la paguina.
-        </h2>`; 
-			```
+	
+	```
+	frase2= `<h2>
+   Hola ${nombre}, Bienvenido a la paguina.
+   </h2>`; 
+	```
+	- Escape de comillas simples('string') o de comillas dobles ("string"). 
+
+* Operadores: [video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=4541s)
 	- **De Comparacion**:   
 		== Igualdad.  
 		!=	Desigualdad.  
@@ -163,12 +251,14 @@
 		Valor 1 || Valor2. Valor1 OR Valor2.  
 		!Valor.  NOT Valor1.    
 		
-* **Camel Case**. El estandar para definir nombre en JS, se comienza con minusculas y la segunda palabra en mayusculas.Ejemplo:   
+* <a name="Camel"></a>**Camel Case**. El estandar para definir nombre en JS, se comienza con minusculas y la segunda palabra en mayusculas.
+[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=5697s)
+Ejemplo:   
 nombreCliente
 variableNombre
 document.getElementById() -->Ejemplo de Camel Case.    
 
-* **Condicionales:**   
+* <a name="Condicionales"></a>**Condicionales:**	[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=5822s)
 	- IF.  
 	 if (condicion){  
 	...   

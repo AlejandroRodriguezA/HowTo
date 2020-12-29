@@ -69,3 +69,30 @@ function cerrar() {
     * <a name="StatusBar"></a>StatusBar:
     * <a name="ToolBar"></a>ToolBar:
 * <a name="Hereda"></a>Hereda las proppiedades de EventTarget:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a
+a
+a
+a
+a
+a
+a
+<a name="prueba"></a>
