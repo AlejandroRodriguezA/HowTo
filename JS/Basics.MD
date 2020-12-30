@@ -1,6 +1,12 @@
-# JS a Junior de [Soy Dalton](https://youtu.be/z95mZVUcJ-E)
+# JavaScript de [Soy Dalton](https://youtu.be/z95mZVUcJ-E)
 
-# Indice:[Prueba](./Curso2.MD/#windown)
+Estas son mis anotaciones del curso de Dalton, y esta en fomato **Markdown**, <small>[aqui](https://markdown.es/)</small> puedes ver más información sobre que es markdown y las diferentes formas de visualizar el documento, quizas lo más facil es verlo desde **Github.** 
+
+***Nota:***   
+	* <small>[video](https://youtu.be/z95mZVUcJ-E)</small> son links al video del curso de Dalton al momento donde explica el tema.  
+	* <small>[más info](https://developer.mozilla.org/en-US/)</small> son links a documentación, usualmente a  mozilla developer, que profundiza el tema explicado. Existe la documentacion en español, por si la prefieren.
+
+# Indice:
 1. [Capitulo 1:](#Capitulo1)
 	* [Introducción.](#Introduccion)
 	* [Editor de Texto.](#Editor)
@@ -13,8 +19,14 @@
 	* [Camel Case.](#Camel)
 	* [Condicionales](#Condicionales)
 2. [Capitulo 2:](#Capitulo2)
-3. Capitulo 3:
-4. Capitulo 4:
+	* [Arrays.](#Arrays)   
+	* [Arrays Asociativos.](#Asociativos)
+	* [Bucles: (While,For).](#Bucles)
+	* [Funciones.](#Funciones)
+	* [ForEach.](#ForEach)
+	
+3. [Capitulo 3:](#Capitulo3)
+4. [Capitulo 4:](#Capitulo4)
 
 	* [Método de Cadenas](#MetodosCadenas)  
 		- [concat()](#concat)
@@ -90,14 +102,15 @@
 	- [Metodos de childs (hijos).](#MChilds)
 	- [Propiedades de parents (Padres).](#PropiedadesPadres)
 	- [Propiedades de siblings (Hermanos).](#PropiedadesHermanos)
-	- [Nodos, una propiedad extra.](#PropiedadExtra)
+	- [Nodos, una propiedad extra.](#PropiedadExtra)     
+	
 
-	[^under]
-	[^under]: If **Underline** _is_ disabled_ `_this_` will be rendered as *emphasized* instead of being underlined.	
+- - - 
 
-
-## <a name="Capitulo1"></a> Capitulo 1: 
-* <a name="Introduccion"></a>Introduccion. [video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=445s)
+	
+<a name="Capitulo1"></a>  
+##Capitulo 1: 
+* <a name="Introduccion"></a>Introduccion: <small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=445s)</small>
 	- JS es un leguaje de programacion Interpretado que se difiere a un leguaje compilado, es decir, se ejecuta en el navegador en el inteprete.  
 	- Es Orientado a objetos.  
 	- Es Imperativo. Se va ejecutando linea a linea.
@@ -107,8 +120,8 @@
 	- Lenguaje dinnamico. El dato se ajusta a la variable.
 	- Esta construido sobre ECMASCRIPT (5, 6, 7, 8, Next).
 
-* <a name="Editor"></a>Editor de Texto:Esta usando Sublime Text 3, su configuracion (plugins) son:	[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=940s)
-	- shift+command+P --> install control Package
+* <a name="Editor"></a>Editor de Texto:Esta usando Sublime Text 3, su configuracion (plugins) son:	<small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=940s)</small>
+	- shift+command+P --> install control Package. Esta opcion es para Mac. 
 	- BlackBird-ColorScheme
 	- Brogrammer
 	- Set UI
@@ -116,15 +129,15 @@
 	- ColorHelper
 	- ColorPicker
 	
-* <a name="Usos"></a>Para que se usa:	[video:](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=1346s)
+* <a name="Usos"></a>Para que se usa:	<small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=1346s)</small>
 	- Dinamismo de los sitios web
 	- Servidor en NodeJS
-	- Tecnologias Frontend como Angular, React o Vue.JS
-	- Mobile Apps
-	- Desktop Apps
+	- Tecnologias Frontend como Angular, React o Vue.
+	- Mobile Apps.
+	- Desktop Apps.
 	- Inteligencia Artificial. No es muy usual, pero se puede usar.
 	
-* <a name="Enlace"></a>Como enlazar JS:	[video:](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=1346s)
+* <a name="Enlace"></a>Como enlazar JS:	<small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=1346s)</small>
 	- En linea:   
 	```<h1 onclick="alert('hola')"> Saludo </h1>	 ```
 	- Dentro de la etiqueta:   
@@ -137,20 +150,20 @@
 	<script src="codigo.js" type="text/javascript"></script>
 	```
 	- Con un Require. Buscar inforamcion pues el no lo explica.
-* <a name="Variables"></a>Variables:	[video:](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=1672s)
+* <a name="Variables"></a>Variables:	<small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=1672s)</small>
 	- Hay tres formas de declarar la variables (var, let, const)
 		* var: alcance global.
 		* let: alcance local.
-		* const: es una constante.
-		Nota: Si no se coloca nada, la variable es definida de forma global.  
+		* const: es una constante.  
+		***Nota***: Si no se especifica, la variable es definida de forma global (var).  
 	- Casos especiales:
-		- Undefined:
-		- Null:
-		- Nan:
-	- Multiples Variables.	[video](https://youtu.be/z95mZVUcJ-E?t=2429)
-	- Hoisting: [video](https://youtu.be/z95mZVUcJ-E?t=2513)
-	-  Nota: Los errores se muestran en consola, no en la paguina. option+command+j para mostrar la consola de JS.
-*  <a name="Prompt"></a>**prompt**("mensaje")	[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=2774s)-> Esta funcion permite ingresar informacion por el usuario.
+		- Undefined: Variable definida pero no inicializada.
+		- Null: Variable definida e inicializada con valor vacio o null.
+		- Nan: Variables no son numeros y no se pueden realizar operaciones de numeros, viene del ingles No A Number.
+	- Multiples Variables.	<small>[video](https://youtu.be/z95mZVUcJ-E?t=2429)</small>
+	- Hoisting: <small>[video](https://youtu.be/z95mZVUcJ-E?t=2513)</small>
+	-  ***Nota***: Los errores se muestran en consola, no en la paguina. **option+command+j** para mostrar la consola de JS.
+*  <a name="Prompt"></a>**prompt**("mensaje")	<small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=2774s)</small>-> Esta funcion permite ingresar informacion por el usuario.
 
 ```js
 let nombre = prompt("Dime tu nombre");
@@ -158,8 +171,8 @@ alert ("hola " + nombre);
 ```   
 * document.write(vatiable); --> Escribe la variable en la pag.web.
 
-*  <a name="Operadores"></a>Operadores:	[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=2991s)	
-	- De asignacion. [más info](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Assignment_Operators)  
+*  <a name="Operadores"></a>Operadores:	<small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=2991s)	</small>
+	- De asignacion. <small>[más info](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Assignment_Operators) </small> 
 		* x = y
 		* x += y
 		* x -= y
@@ -183,7 +196,7 @@ alert ("hola " + nombre);
 	```
 	**Nota**: document.write(variable); --> Escribe la variable en la pag.web.
 		
-	- Aritmeticos.[más info](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math)  
+	- Aritmeticos.<small>[más info](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math)</small>  
 		* Suma.  
 		
 		```js
@@ -209,7 +222,7 @@ alert ("hola " + nombre);
 		* División.
 		* Resto.
 		
-* <a name="Concatenacion"></a>Concatenacion:	[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=2991s) 
+* <a name="Concatenacion"></a>Concatenacion:	<small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=2991s)</small> 
 	- **Para forzar** a que se concatene : frase = "" + numero + numero1 ***fuerza  a que sea string***
 	
 	```js
@@ -239,26 +252,31 @@ alert ("hola " + nombre);
 	```
 	- Escape de comillas simples('string') o de comillas dobles ("string"). 
 
-* Operadores: [video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=4541s)
+* Operadores: <small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=4541s)</small>
 	- **De Comparacion**:   
-		== Igualdad.  
-		!=	Desigualdad.  
-		=== Exactamente iguales.  
-		<,> Mayor o menor a que.  
-		<=, => Mayor igual o menor igual a que.  
+		* == Igualdad.  
+		* !=	Desigualdad.  
+		* === Exactamente iguales, y mismo tipo de datos. 
+		* !== Estrictamente diferentes.   
+		* < o > Mayor o menor a que.  
+		* <= o => Mayor igual o menor igual a que.  
 	- **Logicos**:   
-		Valor1 && Valor2. Valor1 And Valor2.  
-		Valor 1 || Valor2. Valor1 OR Valor2.  
-		!Valor.  NOT Valor1.    
+		* Valor1 && Valor2. Valor1 And Valor2.  
+		* Valor 1 || Valor2. Valor1 OR Valor2.  
+		* !Valor.  NOT Valor1.  
+		* a > b. A mayor que B.
+		* a >= b. A mayoy o igual que B.
+		* a < b. A menor que B.
+		* a <= b. A menor o igual que B.  
 		
 * <a name="Camel"></a>**Camel Case**. El estandar para definir nombre en JS, se comienza con minusculas y la segunda palabra en mayusculas.
-[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=5697s)
-Ejemplo:   
-nombreCliente
-variableNombre
-document.getElementById() -->Ejemplo de Camel Case.    
+<small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=5697s)</small>  
+Ejemplos:   
+ 	* nombreCliente.  
+	* variableNombre
+	* document.getElementById() -->Ejemplo de Camel Case.    
 
-* <a name="Condicionales"></a>**Condicionales:**	[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=5822s)
+* <a name="Condicionales"></a>**Condicionales:**	<small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=5822s)</small>
 	- IF.  
 	 if (condicion){  
 	...   
@@ -269,19 +287,20 @@ document.getElementById() -->Ejemplo de Camel Case.
 	else {  
 	}
 	
-	- While.
-	- For.  
+	  
 	
-## <a name="Capitulo2"></a>Capitulo 2: Arrays
- Son objetos que contienen variables que pueden ser de diferentes tipos. 
+<a name="Capitulo2"></a>
+## Capitulo 2: Arrays.  
+
+ <a name="Arrays"></a> Son objetos que contienen variables que pueden ser de diferentes tipos. <small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=7406s)</small>
   
  ```js
- arrays = ["Alex",40,];
+ arrays = ["Alex",40,true];
  ```
  
  
- - Arrays asociativo: (diccionarios)  
- - 
+ - <a name="Asociativos"></a>Arrays asociativo: (diccionarios) <small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=8109s) </small>
+  
  	```js
 	pc = {
 	nombre: "AlexPC",
@@ -296,10 +315,19 @@ document.getElementById() -->Ejemplo de Camel Case.
 	document.write(`<strong>El espacio es:  </strong>${pc['espacio']} <br>`);
 
  	```
- 	
-### While y For:  Bucles.
+<a name="Bucles"></a> 	
+### While y For:  Bucles. <small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=8608s)</small>
 
-- While:
+<small>[más info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements#Iterations)</small> sobre lo bucles.
+
+- **While**: Se ejecuta mientras se cumpla la condición.   
+
+```js
+// Sintaxis:
+while (condition)
+  statement
+```
+Ejemplo:
 
 ```js
 let numero = 0;
@@ -307,8 +335,17 @@ while (numero <= 6){
 	numero++;
 	document.write(numero + "<br>")
 }
+
 ```	
-- Do While:   
+- **Do While**: Parecido al whie, pero ejecuta al menos una vez y luego verifica si se cumple la condición.  
+
+```js
+// Sintaxis:
+do
+   statement
+while (condition);
+``` 
+Ejemplo:
  
 ```js
 let numero = 0;
@@ -318,7 +355,7 @@ do{
 }
 while (numero <= 6)
 ```	
-- Break: Interrumpe o finaliza el bucle.
+- **Break:** Interrumpe o finaliza el bucle.
 
 ```js
 let numero = 0;
@@ -330,8 +367,16 @@ while (numero < 100){
         break; //Interrumpe el while
     }
 }
+// El resultado son los numeros del 1 hasta el número 10.
 ```
-- For:
+- **For:** Crea un bucle de ejecución determinada. 
+
+```js
+// Sintaxis:
+for ([initialization]; [condition]; [final-expression])
+   statement  
+```
+Ejemplos:
 
 ```js
 for (let i = 0; i<10;i++){
@@ -341,7 +386,19 @@ document.write("----------" + "<br>");
 for (let i = 9; i>=0;i--){
     document.write(i + "<br>");
 }
+```   
+- **continue** Termina la ejecucion de las declaraciones y continua con la siguente interacion.   
+
+```js
+for (i=0;i<10;i++){
+	if (i == 5){
+		continue;
+		}
+    document.write(i+ " <br>");
+// Escribe los números del 0 hasta el 9, saltando el 5.
 ```
+
+- **for in:** Muestra la posición  
 
 ```js
 let animales = ["gato","perro","conejo","tiburon"];
@@ -350,33 +407,108 @@ let animales = ["gato","perro","conejo","tiburon"];
 for (i in animales){
     document.write(i + "<br>");
 }
+/*Resultado
+0
+1
+2
+3 */
+```
+
+- **for of:** Muestra el valor de la posición.
+
+```js
 
 document.write("----------------" + "<br>");
 //For i, muestra los valores en cada una de las posiciones
 for (i of animales){
     document.write(i + "<br>");
 }
+/*Resultado
+gato
+perro
+conejo
+tiburon */
 ```
 
 - Label: Sirve para cuando hacemos un break o continue nos lleve a la etiqueta que marcamos.
 
-### Funciones:
+```js
+let array1 = ["maria","josefa","roberta"];
+let array2 = ["pedro","marcelo",array1,"josefina"];
+
+etiqueta:
+for (let array in array2){
+    if (array == 2){
+        for(let array of array1){
+            document.write(array + "<br>");
+            break etiqueta;
+        }      
+    } else {
+        document.write(array2[array] + "<br>")
+    }
+}
+
+```
+**Nota** En este caso, el break interrumpe el segundo ciclo for, pero al colocarle la etiqueta tambien termina el primero, saliendo de los dos bucles, dando como resultado:  
+pedro  
+marcelo   
+maria   
+
+
+<a name="Funciones"></a>
+### Funciones: <small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=11149s)</small>
 
 Tiene tres (3) formas de representarse:  
-	- function nombreFuncion (variable,variable2){  
-		Sentencias  
-		return  
-	}  
-	- const nombreFuncion = function (variable){
-		sentencias  
-		return  
-		}  
-	- const nombreFuncion = (variables) =>{   
-		sentencias   
-		return  
-		}   
+	- ***Declaración de funciones:*** <small>[más info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)</small>  
+		function \[name\]([param1[, param2[, ..., paramN]]]) {  
+   statements
+  
+}   
+	- **Expresión de funciones**   
+		const \[name\] = function ([param1[, param2[, ..., paramN]]]) {
+   statements  
+}   
+	- ***Funciones flechas:***   
+		const \[name\] = ([param1[, param2[, ..., paramN]]]) =>{   
+		statements    
+		}    
+#### Paramétros: <small>[más info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#Function_parameters)</small> 
+  
+- Default parameters (Parámetros predeterminados): Permiten que los parámetros formales se inicialicen con valores predeterminados si no se pasa ningún valor o si no se define. Y pueden ser obsionales.   
 
-## Programacion Orientada a Objetos (POO) 
+```js
+function multiply(a, b = 1) {
+  return a * b;
+}
+
+console.log(multiply(5, 2));
+// Resultado: 10
+
+console.log(multiply(5));
+// Resultado: 5
+```
+- Rest parameters (Parámetros de descanso): Permite representar un número indefinido de argumentos como una lista.   
+
+```js
+const variosParametros = function( ...arg){
+    // los parametros los guarda en una lista, puedo acceder a ellos
+    document.write(arg[0] + "<br>");
+    //Puedo acceder a los metodos de listas.
+    // como length,map,sort
+    document.write(` Pasaste : ${arg.length} parametros <br>`);
+}
+variosParametros("maria","josefa","roberta");
+```
+
+	
+<a name="ForEach"></a>
+### ForEach: <small>[video]()</small>
+
+
+
+<a name="Capitulo3"></a>
+## Capitulo 3:Programacion Orientada a Objetos (POO) 
+
 ### Objetos y Clases:
 
 - Atributos
@@ -393,9 +525,10 @@ Tiene tres (3) formas de representarse:
 	* Metodos Estaticos. Usamos static y es un metodo que se puede utilizar sin instaciar el objeto.
 	* Metodos Accesores (Getters, Setters). Los toma como atributos y no como metodos.
 
+<a name="Capitulo4"></a>
+## Capitulo 4: Metodo cadenas y arrays
 
-## <a name="MetodosCadenas"></a> Metodos de Cadenas
-#####[Para más informacion ver](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+### <a name="MetodosCadenas"></a> Metodos de Cadenas <small>[más info](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)</small>
 
 - <a name="length"></a>**length()**: Devuelve la longitud del string.  
 	* Sintaxis: lentgth(str).[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length)
@@ -430,7 +563,7 @@ Tiene tres (3) formas de representarse:
 	* Sintaxis: str.valueOf().[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf)
 
 
-## <a name="MetodosArrays"></a> Metodos de Arrays
+### <a name="MetodosArrays"></a> Metodos de Arrays
 - <a name="pop"></a>**pop()**: Elimina el ultimo elemento de un array y lo devuelve.  
 	* Sintaxis: arrName.pop().[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 - <a name="push"></a>**push()**: Agrega uno o mas elementos al final de un array y devuelve la longitud del nuevo array.
@@ -474,7 +607,7 @@ Tiene tres (3) formas de representarse:
 	```
 
 
-## <a name="ObjetoMath"></a> Objeto Math
+### <a name="ObjetoMath"></a> Objeto Math
 
 Math es un objeto integrado de JS que tiene propiedades y metodos para funciones y constantes matematicas. [Para mas informacion.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 
@@ -561,8 +694,8 @@ Math es un objeto integrado de JS que tiene propiedades y metodos para funciones
 	* Sintaxis: Math.PI.[Detalle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI)
 	
 
-## <a name="Capitulo5"></a> Capitulo 5:
-
+<a name="Capitulo5"></a>   
+##Capitulo 5:
 
 
 La consola se puede utilizar para variadas funciones como depurar errores, ubicar, asignar o modificar variables, asi como interactuar con la paguina.[Mas informacion](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/The_command_line_interpreter)

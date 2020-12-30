@@ -1,3 +1,4 @@
 .DS_Store
 # No incluye el documento Markdown/ - De momento
 Markdown/
+workspace.code-workspace
