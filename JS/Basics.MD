@@ -109,7 +109,7 @@ Estas son mis anotaciones del curso de Dalton, y esta en fomato **Markdown**, <s
 
 	
 <a name="Capitulo1"></a>  
-##Capitulo 1: 
+## Capitulo 1: 
 * <a name="Introduccion"></a>Introduccion: <small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=445s)</small>
 	- JS es un leguaje de programacion Interpretado que se difiere a un leguaje compilado, es decir, se ejecuta en el navegador en el inteprete.  
 	- Es Orientado a objetos.  
