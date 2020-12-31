@@ -139,16 +139,24 @@ Estas son mis anotaciones del curso de Dalton, y esta en fomato **Markdown**, <s
 	
 * <a name="Enlace"></a>Como enlazar JS:	<small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=1346s)</small>
 	- En linea:   
-	```<h1 onclick="alert('hola')"> Saludo </h1>	 ```
+	
+		```html
+		<h1 onclick="alert('hola')"> Saludo </h1>	 	```    
+	
 	- Dentro de la etiqueta:   
-	``` <script></script>:  
-			<script type="text/javascript">
-		        alert('Hola desde script');
-		    </script> ```
+	 
+		```html
+		<script type="text/javascript">
+			alert('Hola desde script');
+		</script>   
+		```
+		    
 	- Enlazado desde un archivo externo:  
-	```
-	<script src="codigo.js" type="text/javascript"></script>
-	```
+	
+		```html
+		<script src="codigo.js" type="text/javascript"></script>
+		```
+		
 	- Con un Require. Buscar inforamcion pues el no lo explica.
 * <a name="Variables"></a>Variables:	<small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=1672s)</small>
 	- Hay tres formas de declarar la variables (var, let, const)
