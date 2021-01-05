@@ -141,7 +141,7 @@ Estas son mis anotaciones del curso de Dalton, y esta en fomato **Markdown**, <s
 	- En linea:   
 	
 		```html
-		<h1 onclick="alert('hola')"> Saludo </h1>	 	```    
+		<h1 onclick="alert('hola')"> Saludo </h1>   	 	```    
 	
 	- Dentro de la etiqueta:   
 	 
@@ -173,10 +173,11 @@ Estas son mis anotaciones del curso de Dalton, y esta en fomato **Markdown**, <s
 	-  ***Nota***: Los errores se muestran en consola, no en la paguina. **option+command+j** para mostrar la consola de JS.
 *  <a name="Prompt"></a>**prompt**("mensaje")	<small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=2774s)</small>-> Esta funcion permite ingresar informacion por el usuario.
 
-```js
-let nombre = prompt("Dime tu nombre");
-alert ("hola " + nombre);
-```   
+	```js
+	let nombre = prompt("Dime tu nombre");
+	alert ("hola " + nombre);
+	```    
+	
 * document.write(vatiable); --> Escribe la variable en la pag.web.
 
 *  <a name="Operadores"></a>Operadores:	<small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=2991s)	</small>
@@ -515,21 +516,58 @@ variosParametros("maria","josefa","roberta");
 
 
 <a name="Capitulo3"></a>
-## Capitulo 3:Programacion Orientada a Objetos (POO) 
+## Capitulo 3:Programacion Orientada a Objetos (POO)  <small>[video](https://www.youtube.com/watch?v=z95mZVUcJ-E&t=14855s)</small>  
 
 ### Objetos y Clases:
 
-- Atributos
-- Metodos
-- Constructor
-- Instanciacion.
+- Clases. Las clases son una plantilla para crear objetos: <small>[más info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)</small>    
+	- Atributos. Son las caracteristicas de la clase creada.
+	- Metodos. Son funciones dentro de las clases.
+	- Constructor. Es un método especial que nos permite crear e inicializar el objeto creado con las clases.
+	- Instanciacion. Es la asignacion a una variable la clase que definimos.   
+
+```js
+// Creamos la clase animal
+class animal {
+    // Atributos de la clase.
+    constructor( especie,edad,color){
+        this.especie = especie;
+        this.edad = edad;
+        this.color = color;
+        this.info = `soy ${this.especie}, tengo ${this.edad} años y soy de color ${this.color} `;
+    }
+
+    // Creacion de metodos. Son funciones dentro de objetos
+    // No pueden ser funciones flechas.
+    verInfo(){
+        document.write(this.info +"<br>")
+    }
+};
+
+// Instanciamos la clase.
+let perro = new animal("perro",5,"rojo");
+
+document.write(perro.info + "<br>");
+// Resultado esperado: soy perro, tengo 5 años y soy de color rojo
+perro.verInfo();
+// Resultado esperado: soy perro, tengo 5 años y soy de color rojo
+
+// Nota: Aunque los resultados son iguales, el primero fue el resultado de mostrar un 
+// atributo y el segundo es el de llamar a un metodo de la clase.
+```   
+**Nota:**  En la documentación oficial hay un [artículo](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects#The_object_(class_instance)) interesante sobre conceptos [básicos de objetos](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics), JavaScript para principiantes [orientada a objetos](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS) y otros, que valen la pensa leer si quieres profundizar en la programación orientada a objetos.     
+	
 - Caracteristicas:  
 	* Abstraccion
 	* Modularidad
 	* Encapsulamiento
 	* Polimorfismo
 - Otros conceptos de POO:   
-	* Herencia.
+	* Herencia. Crear un nuevo objeto o clase basados en una clase (previamente definida).La nueva clase hereda los atributos y metodos de la clase padre.   
+
+	```js
+	
+	```
 	* Metodos Estaticos. Usamos static y es un metodo que se puede utilizar sin instaciar el objeto.
 	* Metodos Accesores (Getters, Setters). Los toma como atributos y no como metodos.
 
