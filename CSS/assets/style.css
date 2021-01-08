@@ -1,0 +1,265 @@
+/* Selector Universal */
+/* * {
+    color: blue;
+}
+ */
+/* Selector de tipo (h1, parrafos, botones, inputs, etc */
+/* 
+h1 {
+    color: red;
+}
+p {
+    color:aqua;
+} */
+/* Selector por clases */
+/* .titulo-h2{
+    color:bisque;
+} */
+/* Selector por ID */
+/* #id-h2{
+    background-color: red;
+} */
+/* Selector por atributo, en este caso el atributo es creado */
+/* [rancio="siRancio"]{
+    color: white;
+    background-color: blue;
+} */
+/* Por descendiente*/ 
+/* en este ejemplo seleccionamos a los elementos
+p que estan dentro de un div */
+/* div p{
+    color:brown;
+} */
+/*en este ejemplo seleccionamos a los p que estan dentro de un div
+pero son de la clase=parrafoEspecial
+Nota: para las clases se pone el elemento que contien a la clase y luego 
+la clase, o simplemente la clase*/
+/* div p.parrafoEspecial{ 
+    color:black;
+} */
+/* Selector por pseudoClases, como active, hover. Eventos de las selecciones */
+/* p:hover{
+    background-color:red;
+    color: black;
+} */
+ 
+/* Ejemplo de como usar el !important */
+/* .titulo-h2{
+    color: black;
+    background-color:red;
+}
+h2 {
+    color:yellow;
+    background-color:aqua !important;
+}
+ */
+
+/* El estilo de clase tiene mayor rango que la de
+elemento, pero al usar el !important, el estilo que
+domina es este. */
+
+/* 
+.contact-form {
+    font-size:20px;
+    background-color: black;
+    width: 50vw;
+    height: auto;
+    display:block;
+}
+
+div p.parrafoEspecial {
+    color: white;
+    font-size: 1.5em;
+    font-family: 'Redressed';
+}
+
+.contact-form__h1 {
+    aqui 1 em es de 20px que es
+    el tamaño que viene de la caja contenedora
+
+    tamaño
+    font-size: 2em;
+    Tipo de letras
+    font-family: 'Redressed', cursive;
+    Lo que ocupa la caja que contiene la letra, a lo alto
+    line-height: 1.5;
+    El grosor de cada letra
+    font-weight: 400;
+    
+}
+
+
+h2 {
+    display:inline;
+    A los elementos en linea no se aplica height
+    height: 400px; 
+}
+
+h3 {
+    background-color:red;
+    Inline, pero acepta las propiedades block
+    display:inline-block; 
+    padding: 10px 50px;
+    height:100px;
+    width:100px;
+    box-sizing: content-box;
+    aqui el ancho de la caja son 100px del widht + 50px de padding 
+    derecha + 50px padding izquierda => total de 200px
+
+    border-radius: 2em;
+}
+ */
+
+/* 
+div {
+    width: 100px;
+    height: 100px;
+    display: block;
+    color:black;
+
+}
+
+
+.caja1 {
+    background-color:orange;
+    top:20px;
+
+}
+
+.caja2 {
+    background-color:green;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.caja3 {
+    background-color:lightblue;
+}
+
+.caja4 {
+    background-color:yellow;
+} */
+
+/* .contenedor{
+    width:300px;
+    height:300px;
+    background:blue;
+    margin: 80px;
+    position: relative; 
+}
+.hijo {
+    background:orange;
+    width:120px;
+    height:120px;
+    position: relative;
+    top: -20px;
+    left: -20px;
+    z-index: -1;
+} */
+/* 
+div {
+    
+    display: block;
+    background:yellow;
+    position: absolute;   
+   
+}
+
+.contenedor {
+    
+    position: relative;;
+    border: 4px solid red;
+    margin:20px auto;
+    height: 450px;
+    width: 450px;
+    background: green;
+}
+
+div div {
+    height: 75px;
+    width: 75px;
+}
+.caja1 {
+    background-color:orange;
+   top: 0;
+
+}
+
+.caja2 {
+    background-color:blue;
+    right: 0;
+
+}
+
+.caja3 {
+    background-color:lightblue;
+    bottom:0;
+
+}
+
+.caja4 {
+    background-color:yellow;
+    right: 0;
+    bottom: 0;
+}
+
+.caja5 {
+    background: red;
+    top:0;
+    left:0;
+    bottom:0;
+    right: 0;
+    margin:auto;
+} */
+body {
+    padding-top: 60px ;
+
+}
+/* .caja-fija {
+    position: sticky;
+    background:red;
+    top:50px;
+    bottom:70px;
+    
+
+
+} */
+/* 
+div {
+    margin:auto;
+    margin-top: 50px;
+    width:320px;
+    height: 350px;
+    border: 4px solid red;
+    background: grey;
+    
+    overflow-x: scroll;
+    object-position: 10px;
+    background: #000;
+
+
+} */
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-item {background: #224488;
+    color: #fff;
+    padding:10px;
+    margin: 10px;
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
+    flex: 1;
+}
+
+.orange {
+    background:#ff9000;
+}
+ .green {
+     background: #09bb09;
+
+ }
