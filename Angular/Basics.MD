@@ -74,7 +74,7 @@ TypeScrip [handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
     ng g c <address>/<component_name>
     ```
 
-* Para borrar un componento no hay un comando en CLI, sigue las instrucciones de [aqui.](https://www.angularjswiki.com/angular/how-to-delete-a-component-in-angu)
+* Para borrar un componente no hay un comando en CLI, sigue las instrucciones de [aqui.](https://www.angularjswiki.com/angular/how-to-delete-a-component-in-angu)
 
 * Transformando la data usando [PIPES.](https://angular.io/guide/pipes)   
 
