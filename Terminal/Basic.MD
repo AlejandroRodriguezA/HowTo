@@ -27,6 +27,11 @@
     ```bash
     cat text.txt
     ```
+- **pbcopy** - Copiar el contenido del archivo en el porta papeles:
+
+	```bash
+		$ cat filename.abc|pbcopy
+	```
 - **cd** - Navegacion por los archivos: 
 
     ```bash

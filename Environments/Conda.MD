@@ -15,15 +15,23 @@ Documentacion <https://conda.io/projects/conda/en/latest/user-guide/tasks/manage
 	```
 	conda env create -f environment.yaml
 	```   
-6. Para mostrar los ambientes que existen:   
-	
+6. Para mostrar los ambientes que existen: 
 	```
 	conda env list
 	```
+
+7. Borrar un ambiente:
 	
+	```
+	conda env remove --name project-env
+
+	```
+ 
+	
+		
 ## Para crear variables
 
-7. Ir a la carpeta del environment, ```$ create env list ``` y crear dos carpetas:   
+7. Ir a la carpeta del environment, ```$ conda env list ``` y crear dos carpetas:   
 	- mk -p etc/conda/activate.d   
 	- mk -p etc/conda/deactivate.d
 	   
@@ -84,4 +92,21 @@ Documentacion <https://conda.io/projects/conda/en/latest/user-guide/tasks/manage
 	$ conda 
 	
 
+## Ver los paquetes del environment
 
+- Si el ambiente no esta activado:
+
+```
+conda list -n myenv
+```
+- Si el ambiente esta activado:
+
+```
+conda list
+```
+
+- Para ver si un paquete especifico esta en el ambiente:
+
+```
+conda list -n myenv scipy
+```
