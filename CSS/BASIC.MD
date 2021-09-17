@@ -1,12 +1,13 @@
 # CSS
 [Curso Dalto de CSS](https://youtu.be/OWKXEJN67FE)
-
+<a name="Inicio"></a> 
 ## Index:
 ### Basicos:
 
+
 1. [Estructura.](#Estructura)
-2. [Selectores.](#Selectores)
-3. [Especificidad.](#Especificidad)
+2. [Selectores.](#Selectores) Es la forma de seleccionar los elementos para especificar las propiedades.
+3. [Especificidad.](#Especificidad)Para evitar los conflictos cuando usamos los selectores
 4. [Metodología BEM.](#BEM)
 5. [Unidades.](#Unidades)
 6. [Propiedades de Texto.](#PropiedadesTexto)
@@ -432,7 +433,8 @@ Es una mezcla entre relative y el fixed. Se reserva el espacio en el DOM y se de
 
 
 <a name="Display"></a>   
-### 25. [Display.](#)   
+### 25. [Display.](https://www.youtube.com/watch?v=OWKXEJN67FE&t=10530s)<small>Para ir al inicio [ volver](#Inicio)</small> 
+  
 * Block.
 * Inline.
 * InlineBlock.

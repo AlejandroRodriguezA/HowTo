@@ -76,7 +76,20 @@ En el archivo angular.json incluir la instalacion:
 
 ### Los componentes son importantes.    
 
-### Creando nuevos componentes.  
+### Creando nuevos componentes.
+
+```
+ng generate component <component-name>
+```  
+
+Para no incluir las pruebas se utiliza:
+
+```
+ng generate component <component-name> --skipTests true
+```
+
+**Nota:Support for camel case arguments has been deprecated and will be removed in a future major version.
+Use '--skip-tests' instead of '--skipTests'.**
 
 ### Databinding.   
 
