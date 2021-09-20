@@ -21,6 +21,16 @@
 	$ touch .gitignore
 ```
 
+**NOTA:** El archivo ".gitignore" tiene la siguiente estructura:
+
+```
+# Los comentarios van asi.
+# Para excluir los "#" se tiene que utilizar \#.
+.DS_Store
+*/.DS_Store
+assets/.DS_Store
+```
+
 - **git status**.Muestra el estatus de los archivos.  
 
 	```
@@ -35,7 +45,7 @@
     $ git add archivo.ext  -> Agrega el archivo espeficifo
 
     ```
-- **Git rm** --cached <file>]: Remueve el archivo y lo deja fuera del proyecto a guardar.  
+- **Git rm** --cached <file>: Remueve el archivo y lo deja fuera del proyecto a guardar.  
 
 	```
     $ git rm --cached <file>
