@@ -98,19 +98,20 @@ Username for 'https://github.com': r***************z@gmail.com
 	Si la opcion que prefieres es la de HTTPS y no quieres estar pegando el token cada vez que haces una conexion [aqui hay mas informacion](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git), para guardar el token.
 	
 14. Una vez que tenemos la carpeta en github, tenemos dos opciones:
-	- Hacer en GUI. Entonces vamos a [heroku](https://www.heroku.com/home).
+	- **Hacer en GUI:** Entonces vamos a [heroku](https://www.heroku.com/home).
 15. En el Dashboard, creamos una nueva app.
 ![git logo](assets/heroku_new_app.png)
 16. Seleccionar conectar con GitHub y luego click al boton "Connect to GitHub"
 17. Autorizo a Heroku.
 18. Indico el nombre del repositorio en el github, en mi caso "AJ-page" y conectar
 19. Opcional habilitar las actualizacion automaticas de github.
-	- Hacerlo por consola: 
 20. "Deploy Branch".
+	- **Hacerlo por consola:** [ver este video de Corey Schafer](https://youtu.be/6DI_7Zja8Zc?t=752)
+	
 21. dsafasdfasdfasdfasd
 22. asddsafdsafasdf
 23. asdasdfadsf
-21. 
+
 
 
 
