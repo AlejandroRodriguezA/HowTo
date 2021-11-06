@@ -6,8 +6,6 @@
     ```bash
     touch test.txt
     touch Documents/.../test.txt
-
-    ```
 - **rm** - Borrar un archivo:
 	
 	```bash
@@ -63,6 +61,8 @@
 	ls -ld .??* // Muestra solo los archivos ocultos en el directorio actual.
 	
 
+	
+
 - **pwd** - Muestra la ruta del directorio actual de trabajo.
 
 	```bash
@@ -98,9 +98,11 @@ drwxr-xr-x   2 root  staff   64 Jul 24 12:06 pki
 
 
 - Para abrir una aplicacion en ventana nueva:
+
     ```bash
     $ code ~/Documents/README.MD --new-windown
     ```
+- **open** Abreel finder del directorio, por ejemplo ```open . ``` abre el actual directorio. [Flavio](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
                                         
 ## Text Command Line Shortcuts 
 [agradecimientos](https://wilsonmar.github.io/mac-osx-terminal/#open-terminal-several-ways)
@@ -122,6 +124,7 @@ drwxr-xr-x   2 root  staff   64 Jul 24 12:06 pki
 * control + left = previous session
 * control + right = previous session
 * command + K = limpia el terminal, la diferencia con control + L, es que no puedes ver lo anterior.
+* control + o = Copia la toda la linea. Esto es un plugin "copybuffer" de OHMYZSH!.
 
 
 
@@ -133,6 +136,8 @@ drwxr-xr-x   2 root  staff   64 Jul 24 12:06 pki
 	* 
 
 2. Informacion sobre el comando ***chmod*** que se usa para cambiar los permisos de archivos/documentos. [chmod](https://www.december.com/unix/ref/chmod.html)
+
+
 
 
 

@@ -1,6 +1,6 @@
 ## Multi Cursor en Visual Studio Code.
 
-Esta informacion es del blog de [Tahoe Ninjas](https://tahoeninjas.blog/2019/03/30/multi-cursor-editing-in-visual-studio-code/), pero solo para windows, asi que me pude a buscarlos para MAC.
+Esta informacion es del blog de [Tahoe Ninjas](https://tahoeninjas.blog/2019/03/30/multi-cursor-editing-in-visual-studio-code/), pero solo para windows, asi que los busque para MAC.
 
 ### Select next/previous line.
 

@@ -43,10 +43,26 @@
 	<script src="Escrito/poryectos/claseJsAR/codigo.js" type="text/javascript"></script>
 	```
 
+## Libros Gratis de JS.
+
+* [Goal Kicker](https://goalkicker.com/). Tiene "notas" de varios lenguajes de programación, entre ellos JS. Muy bueno para tener a mano si no tienes acceso a internet.
+* [EloquentJavaScript.net](https://eloquentjavascript.net/). Es muy interesante, pero "no se puede" descargar gratis, es decir, lo puedes leer on-line o comprarlo.
+* Hay muchos más, solo googlealo!!!
+
+
+
 ## Consola.
 <a name="consola"></a>
 
-Todos los navegadores modernos soportan la escritura de mensajes por consola usando diferentes "logging methods" o metodos de log. El mas usado y comun es ```log()```.
+Todos los navegadores modernos soportan la escritura de mensajes por consola usando diferentes "logging methods" o metodos de log. Existen cuatro categorías de salida, utilizando los siguientes metodos:
+
+- ```console.log()```.El mas usado y comun.
+
+Los siguentes muestran el simbolo respectivo junto con el mensaje.
+
+- ```console.info()```.
+- ```console.warn()```.
+- ```console.error()```.
 
 La consola es usada fundamentalmente para depurar o probar nuestro codigo, conocido como **"debugging purposes"**.
 
@@ -55,13 +71,64 @@ La consola es usada fundamentalmente para depurar o probar nuestro codigo, conoc
 	- En MAC (option+command+J) o (⌥ + ⌘ + J).
 	- En Windows/linux (Shift+CTRL+J).
 
-- En **Firefoz** la ruta es: 	"Tools -> "
+- En **Firefoz** la ruta es: 	"Tools -> Browser Tools -> Web Browser Tools ".
 
+	- En MAC (option+command+I) o (⌥ + ⌘ + I).
+	- En Windows/linux (Shift+CTRL+K).
 
+### El formato de la salida por consola.
+
+Muchos de los metodos de impresion por consola or (console's print methods) son manejados como "C-like" formatos de strings, es decir, parecidos a como maneja C los formatos de string.
+
+	```js
+	console.log('Capitulo: %s de string, seccion %d Consola','Formato',1);
+	```
+
+La lista completa de formatos es:
+
+- %s		Formatea el valor como un string.
+- %i o %d	Formatea el valor como un integer(numero).
+- %f		Formatea el valor como un floating
+- %o		Como un objeto expandible del DOM.
+- %0		Como un objeto de JS.
+- %c		Aplica CSS styles.
+
+	```JS
+	console.log ('%cCapitulo: %cConsola y sus formatos de salida',"color:blue;font-size:large","font-size:mediun")
+	```
+
+### Usando grupos para las impresiones por consola.
+
+Las agrupaciones de las impresiones por consola nos permiten agrupar mejor los resultados para tener una mejor idea o vision de los resultados. Existen dos formas de agrupar:
+
+-	Grupos Colapsados. La informacion del grupo no se muestra o despliega hasta que se lo indiques en la consola. Como por ejemplo:
+
+	```js
+	console.groupCollapsed("Grupos Colapsados");
+	console.log("Aqui las salidas");
+	console.log("que necesite hacer no importan si son %i o %i",1,1000);
+	console.groupEnd();
+	```
+
+- Grupos Desplegados. La informacion se muestra desde el principio.
+
+	```js
+console.group("Grupos desplegados");
+console.log("Importante recordar que ambos tienen que terminar con console.groupEnd();")
+console.group("Nivel 2");
+console.info("La agrupacion puede contener niveles");
+console.warn("Mensajes de alerta");
+console.error("o mensajes de error");
+// console.log("La agrupacion puede contener niveles");
+console.groupEnd();
+console.groupEnd();
+	```
+
+**NOTA:** Un funcionalidad interesante es que se pueden mostrar subgrupos, como se puede observar en el ejemplo anterior. Si quieres mas informacion sobre las opciones y metodos disponibles puedes ir a la documentacion de [MDN Web Docs.](https://developer.mozilla.org/es/docs/Web/API/Console)
 
 <a name="Comentarios")></a>
 ## Comentarios.
-1. Para comentar el codigo:
+Para comentar el codigo:
 		Los comentarios son lineas de codigo que JS ignora. Los comentarios son un gran forma de dejar notas para uno mismo o para que otra persona entienda el codigo.
 	
 	Hay dos formas de escribir comentarios en JS:
@@ -82,20 +149,145 @@ La consola es usada fundamentalmente para depurar o probar nuestro codigo, conoc
 	 codigo y verificar el funcionamiento del
 	 programa sin este codigo.*/
 	 ```
+
 <a name="Declarar_variables"></a>
 ## Variables.
-2. Declarar variables:
 
-	JavaScript tiene ocho (8) direfentes tipos de data:
-	- ```undefined```
-	- ```null```
-	- ```boolean```. Pueden ser true o 1, o false o 0.
+Las variables en JS se declaran usando la palabra reservada ```var <nombre_variable>;``` o ```let <nombre_variable>;```. 
+
+El nombre de la variable puede ser compuesto de numeros, letras, "\$" y/o  "_," pero no puede tener espacios en blanco ni comenzar con numeros.
+
+ **NOTA:En JS se termina cada declaracion con " ; ".**
+ 
+### Diferencias entre let y var.
+
+Hay muchas/varias diferencias entre ```let``` y ```var``` y puedes [profundizar en](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let), aqui las que más uso:
+
+* **Declaración:**
+	* ```Var``` no necesita ser declarada para poder utilizarla, aunque es recomendable.
+	* ```let``` necesita ser declarada e inicializada para poder leerla.
+	
+	```js
+	//Funciona
+	myName = 'Chris';
+	
+	function logName() {
+	  console.log(myName);
+	}
+	
+	logName();
+	
+	var myName;
+	```
+
+	**Nota:** Esto funciona por el [var hosting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) para más información, pero basicamente es 	que las variables (declaraciones en general) son procesadas **ANTES** que el codigo se ejecute.
+
+
+	```js
+	console.log(bar); // undefined
+	console.log(foo); // ReferenceError
+	var bar = 1;
+	let foo = 2; // End of TDZ (for foo)
+	```
+	
+	Nota que la variable **bar** queda como "undifined", mientras que la variable **foo** da un error de refencia.[End of TDZ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) se refiere a que se guarda en una zona temporal hasta la inicializacion fue completada y va en orden de ejecución.
+	
+	
+* **Alcance**.Cuando son declaradas en nivel superior del programa o de la funcion:
+	* ```var``` crea una propiedad en el objeto global.
+	* ```let``` no lo hace.
+	
+	
+	```
+	var x = 'global';
+	let y = 'global';
+	console.log(this.x); // "global"
+	console.log(this.y); // undefined
+	```
+	
+* **Re-declaracion:**
+	* ```var``` permite redeclaracion de variables.
+	* ```let``` no lo permite.
+	
+	
+	```
+	let foo;
+	let foo; // SyntaxError thrown.
+	  	
+	// Con var si se puede hacer:
+	var foo;
+	var foo=4;
+	``` 	
+	
+
+### Definiendo Variables.
+
+Para inicializar la variable o asignarle valor, se utiliza el operador de asignacion (```=```).
+
+```js
+var myVar = 1;
+```
+
+En este punto tenemos dos (2) variables definidas, una que fue asignado ningun valor y la otra fue asignada con el valor "1". JS al no asignarle valor le asigna el valor "undefined" o no definido y cuando le asignamos un numero esa variable es un "number".
+
+```js
+var nombre_variable;
+var myVar = 1;
+console.groupCollapsed("Variables")
+    console.log("La variable %c\"nombre_variable\" ","color:blue","es del tipo: ",typeof(nombre_variable));
+    console.log('La variable %c"myVar"%c es del tipo: %s',"color:blue","color:black",typeof(myVar));
+console.groupEnd();
+```
+
+dando como resultado:
+![git logo](./src/variable_undefined.png)
+
+**NOTA** todas las variables y funciones son "case sensitive" es decir, que diferencia entre mayusculas y minusculas.
+
+**Best Practice** o mejores practicas para nombrar una variable o funcion en JS es con ***camel case***. Si una variable esta compuesta por varias palabras, la primera se escribe con minuscula y las subsiguientes con mayusculas sin espacio y/o simbolo alguno, por ejmplo:
+
+```js
+var someVariable;
+var anotherVariableName;
+var thisVariableNameIsSoLong;
+```
+
+#### Usando los "Short-circuiting" o valor por defecto de una variable.
+
+Cuando se esta [desestructurando](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) un objeto o un vector a variables se les puede asignar variables por defecto:
+
+
+```
+let a, b;
+
+[a=5, b=7] = [1];
+console.log(a); // 1
+console.log(b); // 7
+
+
+
+```
+
+**En la seccieon de vectores y objetos  lo explico con más detalle.**
+
+
+
+
+
+
+### Tipos de variables o Datos:
+
+JavaScript tiene ocho (8) direfentes tipos de data:
+
+- ```undefined```.
+- ```null```.
+- ```boolean```. Pueden ser true o 1, o false o 0.
 	
 	```js
 	var myBoolean = true; // 1-bit true/false (0 or 1) 
 	var myBoolean2 = false;
 	```
-	- ```string```. Los string se declaran usando las doble comillas.
+- ```string```. Los string se declaran usando las doble comillas.
 
 	```js
 	var miNombre = "Alejandro";
@@ -103,17 +295,11 @@ La consola es usada fundamentalmente para depurar o probar nuestro codigo, conoc
 	// En caso de necesitar usar las "" dentro del string, se usa el simbolo de escape \.
 	var miApellido = "Rodriguez \"Alvarez\".";
 	
-	console.log(miNombre);
-	console.log(miApellido);
-	
-	/* El resultado es:
-	Alejandro
-	Rodriguez "Alvarez". */
 	```
 		
-	- ```symbol```
-	- ```bigint```
-	- ```number```. Aqui mas ejemplos de numeros:
+- ```symbol```.
+- ```bigint```.
+- ```number```. Aqui mas ejemplos de numeros:
 
 	```js
 	var myInteger = 12; // 32-bit number (from -2,147,483,648 to 2,147,483,647)
@@ -123,30 +309,12 @@ var myDouble = 9310141419482.22; // 64-bit floating-point number
 
 	```
 	
-	- ```object```
+- ```object```.
 
-	Para declarar o crear una variable se utiliza la palabra clave ```var```, por ejemplo: ```var myName; ```
-	
- 3. Asignacion de valores a variables;
-	Se utiliza el operador de asignacion (```=```). Por ejemplo:
-	
-	```js
-	var myVar;
-	myVar = 5;
-	```
-	Se puede declarar y asignar valor a la variable al mismo tiempo: ``` var a = 9;```
-	
-	Si defines la variable, pero no le asignas un valor, su valor es ```undefined``` y si se intenta hacer una operacion matematicas con esta variable, el resultado sera ```NaN``` o "Not a Number" o "No es un Numero".
-	
-	**NOTA** todas las variables y funciones son "case sensitive" es decir, que diferencia entre mayusculas y minusculas.
-	
-	**Best Practice** o mejores practicas para nombrar una variable o funcion en JS es con ***camel case***. Si una variable esta compuesta por varias palabras, la primera se escribe con minuscula y las subsiguientes con mayusculas sin espacio y/o simbolo alguno, por ejmplo:
-	
-	```js
-	var someVariable;
-	var anotherVariableName;
-	var thisVariableNameIsSoLong;
-	```
+
+
+
+
 <a name="Operadores_Matematicos"></a>
 ## Operadores Matematicos.
 
@@ -344,13 +512,80 @@ Aqui los caracteres "imprimibles" de la tabla ASCII.
 ```
  
 
-3. Concanetacion.
+### Concanetacion.
 	
 	La concanetacion o union de dos o mas strings se realiza con el operador ```+``` o usando el metodo ```concat()``` del objeto String.
 	
+	Nota: La concanetacion no adiciona espacios en blanco o separacion entre los dos o mas strings.
+
+	Ejemplos:
+
+```js
+var str = " a +" + 'b';
 	
-4. kjakjshfdkjs
-Al trabajar con strings es importante el uso de caracteres de escape, como vimos anteriormente, aqui mas ejemplos utiles:
+str += ".Tambien adiciona al string existente";
+```
+
+La interpolacion o la utilizacion de  variables en la construccion de strings.
+
+```js
+var myName = "Alex";
+var myStr = "My name is " + myName + " and I am well";
+var otraVariable = 2;
+
+myStr += ".Tengo +" + otraVariable + " años de experiencia programando";
+
+```
+
+### length.
+
+Para determinar la longitud o tamaño del string se usa el metodo ```.length```. Como por ejemplo ```console.log("Que tamaño tiene este 'String'");```
+
+### Notacion de ```[]``` para leer el string.
+
+La notacion de corchetes ```[]``` se utiliza para acceder a las diferentes posiciones dentro del string.
+
+**NOTA**:Todo lo que utiliza esta notacion comienza de cero (0). Entonces para obtener el primer elemento de un string.
+
+Y asi se pueden ir a cada uno de los elementos del string, como por ejemplo para acceder al ultimo se puede hacer...
+
+
+```js
+var xVariable = "Cualquier cosa";
+console.log(xVariable[0]);
+//regresa C.
+console.log(xVariable[xVariable.length - 1]);
+//regresa: a
+```
+
+
+### Entendiendo la Inmutabilidad de los STRING.
+
+En JS, los Strings son inmutables, lo que significa que una vez que son creados no pueden ser alterados. Por ejemplo, el siguiente codigo:
+
+
+```js
+console.log("el String '" + xVariable + "' no ha cambiado");
+```
+
+### Separando el string en un "vector"	.
+
+Lo primero es que un ```vector o array``` es una variable que puede almacenar varias variables en su interior.**NOTA:Esto se profundiza mas adelante.** y estas variables pueden ser de cualquier tipo. Para esto se utiliza el metodo ```split```.
+
+Ejemplo:
+
+```js
+var s = "one, two, three, four, five";
+console.log(s);
+var sVector = s.split(", ");
+console.log(sVector);
+//resultado: (5) ['one', 'two', 'three', 'four', 'five']
+//Nota: Note el espacio luego de la ,
+```
+
+p
+
+4. Al trabajar con strings es importante el uso de caracteres de escape, como vimos anteriormente, aqui mas ejemplos utiles:
 	
 	```
 	\'	single quote
@@ -376,3 +611,4 @@ Al trabajar con strings es importante el uso de caracteres de escape, como vimos
 
 	
 6. dasdasDAs
+€

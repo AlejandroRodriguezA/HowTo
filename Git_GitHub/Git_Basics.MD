@@ -1,4 +1,5 @@
-![git logo](../assets/git/git_logo2.png)
+![git logo](../assets/git/git_logo2.png)  
+
 
 * Paguina Oficial [Git](https://git-scm.com/) o `https://git-scm.com/`
 * Paguina del libro:[GIT Book](https://git-scm.com/book/en/v2) `https://git-scm.com/book/en/v2`
@@ -29,6 +30,8 @@
 .DS_Store
 */.DS_Store
 assets/.DS_Store
+*.html #Excluye todos los archivos terminados en .html
+!index.html #index.html si lo incluye
 ```
 
 - **git status**.Muestra el estatus de los archivos.  
